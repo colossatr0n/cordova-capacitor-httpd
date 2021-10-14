@@ -9,6 +9,7 @@
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 #import "HTTPServer.h"
+#import "FileUploaderHTTPConnection.h"
 
 @interface CorHttpd : CDVPlugin {
     // Member variables go here.
@@ -171,6 +172,8 @@
     }
     NSLog(@"Setting document root: %@", self.localPath);
     [self.httpServer setDocumentRoot:self.localPath];
+
+	[self.httpServer setConnectionClass:[FileUploaderHTTPConnection class]];
 
 	NSError *error;
 	if([self.httpServer start:&error]) {
