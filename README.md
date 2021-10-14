@@ -7,6 +7,7 @@ Supported platform:
 You can browse (locally or remotely) to access files in android/ios phone/pad:
 
 * browse the files in mobile device with a browser in PC.
+* upload files by copying the repo files from test/file-uploader into whichever folder you specify as the www_root folder.
 * copy files from mobile device to PC quickly, just with Wifi.
 * use cordova webview to access the assets/www/ content with http protocol.
   * if using capacitor, set `www_dir_name` to `public`. 
